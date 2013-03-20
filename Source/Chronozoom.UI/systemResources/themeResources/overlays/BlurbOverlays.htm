@@ -1,0 +1,37 @@
+﻿<div class="rin_blurbMainDiv">
+    <div class="rin_blurbContainer rin_overlay_top rin_overlay_left" data-bind="css: { 'rin_overlay_right': currentItem.horizontalAlignment ==='Right', 'rin_overlay_left': currentItem.horizontalAlignment ==='Left', 'rin_overlay_top': currentItem.verticalAlignment ==='Top', 'rin_overlay_bottom': currentItem.verticalAlignment ==='Bottom'}, visible:isBlurbVisible, style: { color: currentItem.fontColor }">
+        <div class="rin_blurbTitle">
+            <span data-bind='text:currentItem.title'></span>
+        </div>
+        <div class="rin_blurbDesc" data-bind='html:currentItem.subDescription'>
+            <span data-bind='html:currentItem.subDescription'></span>
+        </div>
+        <div class="rin_blurbMoreContainer" data-bind='visible:currentItem.showDescription'>
+            <div class="rin_blurbMoreIcon">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    version="1.1" baseprofile="full" width="16" height="11.33" viewbox="0 0 16.00 11.33"
+                    enable-background="new 0 0 16.00 11.33" xml:space="preserve">
+                   <path fill="#FFFFFF" fill-opacity="1" stroke-width="0.2" stroke-linejoin="round" d="M 0,5.6663C 0,5.6663 2.9118,11.33 7.99805,11.33C 13.0889,11.33 16,5.6663 16,5.6663C 16,5.6663 13.0889,-1.90735e-005 7.99805,-1.90735e-005C 2.9118,-1.90735e-005 0,5.6663 0,5.6663 Z "/>
+	               <path fill="#050708" fill-opacity="1" stroke-width="0.2" stroke-linejoin="round" d="M 12.0595,5.6663C 12.0595,7.90715 10.2421,9.72651 7.9986,9.72651C 5.75714,9.72651 3.94031,7.90715 3.94031,5.6663C 3.94031,3.42344 5.75714,1.60603 7.9986,1.60603C 10.2421,1.60603 12.0595,3.42344 12.0595,5.6663 Z "/>
+	               <path fill="#FFFFFF" fill-opacity="1" stroke-width="1.06667" stroke-linejoin="round" stroke="#050708" stroke-opacity="1" d="M 10.4169,5.6663C 10.4169,7.00102 9.33276,8.08308 7.99878,8.08308C 6.66333,8.08308 5.5813,7.00102 5.5813,5.6663C 5.5813,4.33027 6.66333,3.24754 7.99878,3.24754C 9.33276,3.24754 10.4169,4.33027 10.4169,5.6663 Z "/>
+             </svg>
+            </div>
+            <div class="rin_blurbMoreText" data-bind='visible:currentItem.showDescription, click: onClickMore'>
+                Click for more...</div>
+        </div>
+    </div>
+    <div class='rin_popup_CBDescription' data-bind='visible:isExpanded'>
+        <div class='rin_popup_CBDescText' data-bind='with: expandedItem'>
+            <h1 data-bind='text: title'>
+            </h1>
+            <!-- ko if: $data.description -->
+            <div data-bind='html: description'>
+            </div>
+            <!-- /ko -->
+            <!-- ko if: $data.copyright -->
+            <h2 data-bind='text: copyright'>
+            </h2>
+            <!-- /ko -->
+        </div>
+    </div>
+</div>

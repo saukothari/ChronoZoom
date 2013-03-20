@@ -1,0 +1,73 @@
+﻿.rin_video_overlay
+{
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    color: #fcfcfc;
+    overflow: hidden;
+    font-family: "Segoe Pro Display" , Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 100%;
+    position: absolute;
+    width: 40%;
+    height: 60%;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    max-height: 350px;
+    max-width: 500px;
+}
+div .rin_overlay_top
+{
+    top: 120px;
+}
+div .rin_overlay_left
+{
+    left: 30px;
+}
+div .rin_overlay_right
+{
+    right: 30px;
+}
+div .rin_overlay_bottom
+{
+    bottom: 120px;
+}
+.rin_video_preview
+{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+}
+.rin_video_cue
+{
+    width: 38px;
+    height: 38px;
+    bottom: 35px;
+    left: 15px;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0.5;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    -webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+    position: absolute;
+    background: #000 url(images/cue.png) no-repeat center center;
+    z-index: 777;
+}
+.rin_video_cue:hover
+{
+    opacity: 1;
+}
+.rin_video_title
+{
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: "Segoe Pro Display" , Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 100%;
+}

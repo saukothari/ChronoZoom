@@ -1,0 +1,14 @@
+﻿<div class='rin_popup_CBDescription'>
+    <div class='rin_popup_CBDescText' data-bind='with: currentItem'>
+        <h1 data-bind='text: title'>
+        </h1>
+        <!-- ko if: $data.description -->
+        <div data-bind='html: description'>
+        </div>
+        <!-- /ko -->
+        <!-- ko if: $data.copyright -->
+        <h2 data-bind='text: copyright'>
+        </h2>
+        <!-- /ko -->
+    </div>
+</div>

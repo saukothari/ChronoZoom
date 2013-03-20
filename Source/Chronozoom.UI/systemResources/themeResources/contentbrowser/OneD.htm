@@ -1,0 +1,55 @@
+﻿<div class='rin_metrooned_gallery' tabindex='0'>
+    <div class='rin_metrooned_error'>
+        <span>Error occured while loading the image.</span></div>
+    <img src='' alt='' class='rin_metrooned_preview' style='display: none;' />
+    <div class='rin_metrooned_cue' data-bind='clickOrTouch: onExplore'>
+    </div>
+    <div class='rin_metrooned_loading'>
+    </div>
+    <div class='rin_metrooned_outer_container'>
+        <div class='rin_metrooned_thumbScroller' tabindex='1'>
+            <div class='rin_metrooned_container'>
+                <ul data-bind='foreach: groups'>
+                    <li class="rin_metrooned_groupsList">
+                        <h3 class='rin_metrooned_CBGroupTitle rin_selectDisable' data-bind='text: title'>
+                        </h3>
+                        <ul data-bind='foreach: itemsList'>
+                            <li class="rin_metrooned_itemsList">
+                                <div class='rin_metrooned_content' data-bind='clickOrTouch: $root.onMediaClick'>
+                                    <img class='rin_metrooned_thumb' data-bind='attr: {src: thumbnailMedia, alt: id}, css: {selected: $data === $root.currentItem()} ' /></div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class='rin_metrooned_CBDescription rin_selectDisable'>
+        <div class='rin_metrooned_CBDescText rin_selectDisable' data-bind='with: currentItem'>
+            <h1 data-bind='text: title' class="rin_selectDisable">
+            </h1>
+            <!-- ko if: $data.description -->
+            <div data-bind='html: description' class="rin_selectDisable">
+            </div>
+            <!-- /ko -->
+            <!-- ko if: $data.copyright -->
+            <h2 data-bind='text: copyright' class="rin_selectDisable">
+            </h2>
+            <!-- /ko -->
+            <!-- ko if: $data.srcType -->
+            <h3 data-bind='text: srcType' class="rin_selectDisable">
+            </h3>
+            <!-- /ko -->
+        </div>
+    </div>
+    <div class='rin_metrooned_CBtitle'>
+        <h1 class='rin_metrooned_CBtitleText rin_selectDisable' data-bind='text: title'>
+        </h1>
+    </div>
+    <input type='button' data-bind='clickOrTouch: onNext, enable:!isLastItem()' class='rin_metrooned_next'></input><input
+        type='button' data-bind='clickOrTouch: onPrevious, enable:!isFirstItem()'
+        class='rin_metrooned_prev'></input><div class='rin_metrooned_scroll_next'>
+        </div>
+    <div class='rin_metrooned_scroll_prev'>
+    </div>
+</div>

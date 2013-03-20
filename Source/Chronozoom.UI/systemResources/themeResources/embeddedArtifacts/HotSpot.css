@@ -1,0 +1,144 @@
+﻿.rinHotSpotContainer
+{
+    position:absolute;
+    width:24px;
+    height: 44px;
+}
+
+    .rinHotSpotContainer:hover > .rin_HotSpotTextWithImage
+    {
+        opacity:1;
+        visibility:visible;
+    }
+
+    .rinHotSpotContainer:hover > .rin_HotSpotDefault
+    {
+        opacity:0;
+        visibility:hidden;
+    }
+
+    .rinHotSpotContainer:hover .rin_ea_fill
+    {
+        fill-opacity:1;
+    }
+
+
+.rin_HotSpotDefault
+{
+    position:absolute;
+    opacity:1;
+    visibility:visible;
+}
+
+.rin_HotSpotTextWithImage
+{
+    position:absolute;
+    opacity:0;
+    visibility: hidden;
+    top:-82px;
+}
+
+.rin_HotSpotImageOnly
+{
+    position:absolute;
+    opacity:1;
+    visibility: hidden;
+    top:250px;
+    left:500px;
+}
+
+
+.rin_ea_fill
+{
+    fill: #000000;
+    fill-opacity: 0.80;
+    fill-rule:evenodd;
+    stroke-linejoin:miter;
+}
+
+.rin_ea_stroke
+{
+    stroke:#FFFFFF;
+    stroke-opacity:1;
+    fill-rule:evenodd;
+    stroke-linejoin:miter;
+}
+
+.rin_LabelContainer
+{
+    position:absolute;
+    top:250px;
+    left:450px;
+    width:122px;
+    height:25px;
+}
+
+    .rin_LabelContainer:hover > .rin_LabelExpanded
+    {
+        opacity:1;
+        visibility:visible;
+    }
+
+    .rin_LabelContainer:hover > .rin_LabelDefault
+    {
+        opacity:0;
+        visibility:hidden;
+    }
+
+.rin_LabelDefault
+{
+    opacity:1;
+    visibility:visible;
+}
+
+.rin_LabelExpanded
+{
+    position:absolute;
+    opacity:0;
+    visibility:hidden;
+    top:-82px;
+}
+
+.rin_InfoBubbleContainer
+{
+    background-color: rgba(0, 0, 0, 0.80);
+    position:absolute;
+    top:250px;
+    left: 700px;
+    width:270px;
+    height: 500px;
+    padding: 10px;
+    padding-right: 20px;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.rin_InfoBubbleTitle
+{
+    text-transform:uppercase;
+}
+
+.rin_InfoBubbleThumbnail
+{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.rin_InfoBubbleDescription
+{
+    font-size:90%;
+    line-height: 130%;
+ }
+
+.rin_TextUnselectable
+{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; cursor:default;
+}

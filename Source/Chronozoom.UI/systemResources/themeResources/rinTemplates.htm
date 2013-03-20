@@ -1,0 +1,79 @@
+<!-- ..\web\systemResources\themeResources\rinTemplates.htm built Wed 03/13/2013 at  4:46:05.67 --> 
+<script type="text/html" id="Controller.tmpl">
+<div class="mainContainer selectDisable preview" tabindex="0">
+    <div class="rin_Header" data-bind="visible: isHeaderVisible">
+        <span class="rin_HeaderLeft" data-bind="html: title()"></span>
+	<div class="rin_HeaderCenter" data-bind="visible: areTroubleShootControlsVisible">
+        <div class="rin_TroubleShooterControlHolder" data-bind="stopBinding: true"></div>
+	</div>
+	<span class="rin_HeaderRight" data-bind="html: branding()"></span>
+    </div>
+    <div class="rin_ExperienceStream">
+    </div>
+    <div class="rin_Footer" data-bind="visible: showControls">
+        <div class="rin_FooterBackground">
+        </div>
+        <div data-bind="visible: isPlayPauseVisible">
+            <div class="rin_PlayPauseContainer" data-bind="stopBinding: true"></div>
+        </div>
+        <div data-bind="visible: isInteractiveControlVisible">
+            <div class="rin_InteractiveContainer" data-bind="stopBinding: true"></div>
+        </div>
+        <div data-bind="visible: isRightContainerVisible">
+            <div class="rin_RightContainer">
+                <ul>
+                    <li data-bind="visible: areShareButtonsVisible">
+                        <!--<img alt="Facebook" style="display: none;" src="SYSTEM_ROOT/playerControls/img/ToolbarImages/Facebook.png" />--></li>
+                    <li data-bind="visible: isVolumeVisible">
+                        <div class="rin_VolumeControl" data-bind="stopBinding: true"></div>
+                    </li>
+                    <li data-bind="visible: isFullScreenControlVisible">
+                        <div class="rin_FullScreenControl"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="rin_BottomContainer" data-bind="visible: isSeekerVisible">
+            <div class="rin_TimelineHolder" data-bind="stopBinding: true"></div>
+        </div>
+    </div>
+</div>
+</script>
+<script type="text/html" id="FullScreenControl.tmpl">
+<input type="button" class="rin_Button rin_RestoreScreen" /> </script>
+<script type="text/html" id="HorizontalSliderControl.tmpl">
+<div class="rin_SliderContainer" data-bind="attr: {title: getValue()}">
+    <div class="rin_Slider" data-bind="style: {width: getValue()}"></div></div></script>
+<script type="text/html" id="PlayPauseControl.tmpl">
+<input type="button" class="rin_Button" data-bind="css: {rin_Pause: isPlaying(), rin_Play: !isPlaying()}, click: playPauseEvent" /></script>
+<script type="text/html" id="TroubleShooter.tmpl">
+<div data-bind="visible: showControls">
+    <div class="rin_TroubleShootButtonHolder">
+        <input type="button" class="rin_TroubleShootingControl rin_EditNarrativeButton" data-bind="click: editNarrativeClick" />
+        <input type="button" class="rin_TroubleShootingControl rin_SelfTestDialogButton" data-bind="click: showSelfTestDialogClick" />
+        <span class="rin_TroubleShooterNarrativeDuration" data-bind="text: timeControl" />
+    </div>
+    <div class="rin_EditNarrative" data-bind="visible: showEditNarrativeDialog">
+        <textarea class="rin_EditNarrativeText" data-bind="value: narrativeInfo"></textarea>
+        <input type="button" style="float: right" value="Cancel" data-bind="click: editCancelClick" />
+        <input type="button" style="float: right" value="OK" data-bind="click: editCompleteClick" />
+    </div>
+    <div class="rin_SelfTestNarrative" data-bind="visible: showSelfTestDialog">
+        Randomly issue play/pause/seek actions between every
+        <input type="text" size="5" data-bind="value: timeMin" />
+        seconds to
+        <input type="text" size="5" data-bind="value: timeMax" />
+        seconds.
+        <input type="button" style="float:right" value="Stop" data-bind="click: stopSelfTestClick" />
+        <input type="button" style="float:right" value="Start" data-bind="click: startSelfTestClick" />
+    </div>
+</div></script>
+<script type="text/html" id="VerticalSliderControl.tmpl">
+<div class="rin_SliderContainer" data-bind="attr: {title: getValue()}">
+    <div class="rin_Slider" data-bind="style: {height: getValue()}"></div></div>
+</script>
+<script type="text/html" id="VolumeControl.tmpl">
+<div class="rinDefaultVolumeControl">
+    <div class="rin_VolumeSliderPlaceHolder"></div>
+    <input type="button" class="rin_Button" data-bind="css: {rin_Mute: isMuted(), rin_Volume: !isMuted()}, click: changeMuteState" />
+</div></script>

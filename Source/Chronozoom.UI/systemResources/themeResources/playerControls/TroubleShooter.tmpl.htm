@@ -1,0 +1,21 @@
+<div data-bind="visible: showControls">
+    <div class="rin_TroubleShootButtonHolder">
+        <input type="button" class="rin_TroubleShootingControl rin_EditNarrativeButton" data-bind="click: editNarrativeClick" />
+        <input type="button" class="rin_TroubleShootingControl rin_SelfTestDialogButton" data-bind="click: showSelfTestDialogClick" />
+        <span class="rin_TroubleShooterNarrativeDuration" data-bind="text: timeControl" />
+    </div>
+    <div class="rin_EditNarrative" data-bind="visible: showEditNarrativeDialog">
+        <textarea class="rin_EditNarrativeText" data-bind="value: narrativeInfo"></textarea>
+        <input type="button" style="float: right" value="Cancel" data-bind="click: editCancelClick" />
+        <input type="button" style="float: right" value="OK" data-bind="click: editCompleteClick" />
+    </div>
+    <div class="rin_SelfTestNarrative" data-bind="visible: showSelfTestDialog">
+        Randomly issue play/pause/seek actions between every
+        <input type="text" size="5" data-bind="value: timeMin" />
+        seconds to
+        <input type="text" size="5" data-bind="value: timeMax" />
+        seconds.
+        <input type="button" style="float:right" value="Stop" data-bind="click: stopSelfTestClick" />
+        <input type="button" style="float:right" value="Start" data-bind="click: startSelfTestClick" />
+    </div>
+</div>

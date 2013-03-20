@@ -1,0 +1,160 @@
+﻿.rin_TextWithLineContainer
+{
+    position:absolute;
+    top: 400px;
+    left:150px;
+}
+
+.rin_TextWithLineContentContainer
+{
+    background-color: rgba(0, 0, 0, 0.80);
+    color:white;
+    font-size:90%;
+    overflow-y:hidden;
+    line-height: 130%;
+    position:relative;
+    width:250px;
+}
+
+.rin_TWL_Line
+    {
+        fill:none;
+        stroke-linejoin:round;
+        stroke:#000000;
+        stroke-opacity:1;
+        stroke-width:2px;
+    }
+
+.rin_AlignmentLeft
+    {
+        text-align: left;
+    }
+
+.rin_AlignmentRight
+    {
+        text-align: right;
+    }
+
+.rin_TextWithLineDescription
+{
+    position: relative;
+    height:94%;
+    overflow:hidden;
+    margin:10px;
+}
+
+.rin_TWL_Arrow
+{
+}
+
+.rin_TWL_TopLeft_Down
+{
+    position:absolute;
+    top:0px;
+    left:-100px; 
+}
+
+.rin_TWL_TopLeft_Horizontal
+{
+    position:absolute;
+    top:-100px;
+    left:-100px; 
+}
+
+.rin_TWL_TopLeft_Up
+{
+    position:absolute;
+    top:-100px;
+    left:-100px; 
+}
+
+.rin_TWL_TopLeft_Vertical
+{
+    position:absolute;
+    top:-100px;
+    left:-100px; 
+}
+
+.rin_TWL_TopRight_Vertical
+{
+    position:absolute;
+    top:-100px;
+    right:0px;
+}
+
+.rin_TWL_TopRight_Up
+{
+    position:absolute;
+    top:-100px;
+    right: -100px;
+}
+
+.rin_TWL_TopRight_Horizontal
+{
+    position:absolute;
+    top:-100px;
+    right:-100px;
+}
+
+.rin_TWL_TopRight_Down
+{
+    position:absolute;
+    top:0px;
+    right:-100px; 
+}
+
+.rin_TWL_BottomLeft_Vertical
+{
+    position:absolute;
+    bottom: -100px;
+    left:-100px; 
+}
+
+.rin_TWL_BottomLeft_Down
+{
+    position:absolute;
+    bottom:-100px;
+    left:-100px; 
+}
+
+.rin_TWL_BottomLeft_Horizontal
+{
+    position:absolute;
+    bottom:0;
+    left:-100px; 
+}
+
+.rin_TWL_BottomLeft_Up
+{
+    position:absolute;
+    bottom:0;
+    left:-100px; 
+}
+
+.rin_TWL_BottomRight_Up
+{
+    position:absolute;
+    bottom:0;
+    right: -100px;
+}
+
+.rin_TWL_BottomRight_Horizontal
+{
+    position:absolute;
+    Bottom:0;
+    right:-100px;
+}
+
+.rin_TWL_BottomRight_Down
+{
+    position:absolute;
+    bottom:-100px;
+    right:-100px; 
+}
+
+.rin_TWL_BottomRight_Vertical
+{
+    position:absolute;
+    bottom:-100px;
+    right:0px;
+}

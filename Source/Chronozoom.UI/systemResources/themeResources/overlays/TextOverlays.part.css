@@ -1,0 +1,42 @@
+﻿.rin_popup_CBDescription
+{
+    position: absolute;
+    width: 25%;
+    min-width: 300px;
+    right: 0px;
+    float: right;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 85%;
+    font-size: 100%;
+    font-weight: normal;
+    line-height: 160%;
+    color: #fcfcfc;
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 85%, rgba(0,0,0,0.52) 87%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.8)), color-stop(85%,rgba(0,0,0,0.6)), color-stop(87%,rgba(0,0,0,0.52)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.6) 85%,rgba(0,0,0,0.52) 87%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.6) 85%,rgba(0,0,0,0.52) 87%,rgba(0,0,0,0) 100%); /* Opera 11.050+ */
+    background: -ms-linear-gradient(top,  rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.6) 85%,rgba(0,0,0,0.52) 87%,rgba(0,0,0,0) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.6) 85%,rgba(0,0,0,0.52) 87%,rgba(0,0,0,0) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+}
+
+.rin_popup_CBDescription h1
+{
+    font-weight: bold;
+    font-size: 140%;
+    text-transform: uppercase;
+    margin: 0;
+}
+.rin_popup_CBDescription h2, h3
+{
+    font-weight: normal;
+    font-size: 90%;
+    margin: 0;
+    color: Gray;
+}
+.rin_popup_CBDescText
+{
+    margin: 30px;
+    margin-top: 80px;
+}

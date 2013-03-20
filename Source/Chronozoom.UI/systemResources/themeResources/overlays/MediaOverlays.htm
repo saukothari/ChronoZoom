@@ -1,0 +1,9 @@
+﻿<div class='rin_video_overlay' data-bind="css: { rin_overlay_right: currentItem.horizontalAlignment ==='Right', rin_overlay_left: currentItem.horizontalAlignment ==='Left', rin_overlay_top: currentItem.verticalAlignment ==='Top', rin_overlay_bottom: currentItem.verticalAlignment ==='Bottom'}">
+    <img class='rin_video_preview' data-bind='attr: {src: currentItem.smallMedia}' />
+    <div class='rin_video_cue' data-bind='clickOrTouch: onExplore'>
+    </div>
+    <div class='rin_video_title'>
+        <h1 data-bind='text: currentItem.title'>
+        </h1>
+    </div>
+</div>

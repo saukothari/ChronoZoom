@@ -140,6 +140,10 @@ var addSeadragonImage = function (element, layerid, id, vx, vy, vw, vh, z, imgSr
 	return addChild(element, new SeadragonImage(element.vc, /*parent*/element, layerid, id, imgSrc, vx, vy, vw, vh, z, onload));
 };
 
+var addRINPlayer = function (element, layerid, id, vx, vy, vw, vh, z, imgSrc, onload) {
+    if (vw <= 0 || vh <= 0) throw "Image size must be positive";
+    return addChild(element, GetRINPlayer(element.vc, /*parent*/element, layerid, id, imgSrc, vx, vy, vw, vh, z, onload));
+};
 
 /* Adds a video as a child of the given virtual canvas element.
 @param element   (CanvasElement) Parent element, whose children is to be new element.
@@ -1684,6 +1688,59 @@ function SeadragonImage(vc, parent, layerid, id, imageSource, vx, vy, vw, vh, z,
 }
 SeadragonImage.prototype = new CanvasDomItem;
 
+//var rinCache = [];
+function GetRINPlayer(vc, parent, layerid, id, imageSource, vx, vy, vw, vh, z, onload) {
+    var narrativeId = document.location.search || imageSource;
+    var rinDiv;// = rinCache[id];
+    if (!rinDiv) {
+        rinDiv = document.createElement('div');
+        rinDiv.setAttribute("id", id);
+        rinDiv.setAttribute("class", "rinPlayer");
+        rinDiv.addEventListener("mousemove", preventbubble, false);
+        rinDiv.addEventListener("mousedown", preventbubble, false);
+        rinDiv.addEventListener("DOMMouseScroll", preventbubble, false);
+        rinDiv.addEventListener("mousewheel", preventbubble, false);
+
+        var configuration = new rin.PlayerConfiguration();
+        configuration.hideAllControllers = false;
+        
+        rinDiv.rinPlayer = rin.createPlayerControl(rinDiv, configuration);
+        rinDiv.rinPlayer.load(narrativeId, function () {
+            //rinPlayer2.play();
+        });
+        //rinCache[id] = rinDiv;
+    }
+    else {
+        rinDiv.isAdded = false;
+    }
+    return new RINPlayer(vc, parent, layerid, id, imageSource, vx, vy, vw, vh, z, onload, rinDiv);
+}
+
+function RINPlayer(vc, parent, layerid, id, imageSource, vx, vy, vw, vh, z, onload, rinDiv) {
+    this.base = CanvasDomItem;
+    this.base(vc, layerid, id, vx, vy, vw, vh, z);
+    this.initializeContent(rinDiv);
+    
+    this.onRemove = function () {
+        //Handle the remove of RIN resources if any
+        var rinplayerControl = rin.getPlayerControl(rinDiv);
+        if (rinplayerControl)
+        {
+            
+            rinplayerControl.pause();
+            if (rinplayerControl.unload)
+            {
+                rinplayerControl.unload();
+            }
+            rinplayerControl = null;
+        }
+       RINPlayer.prototype.onRemove.call(this);
+    }
+
+    
+}
+
+RINPlayer.prototype = new CanvasDomItem;
 
 /*******************************************************************************************************/
 /* Timelines                                                                                           */
@@ -1788,6 +1845,10 @@ function ContentItem(vc, layerid, id, vx, vy, vw, vh, contentItem) {
 			}
 			else if (contentItem.mediaType === 'pdf') {
 				addPdf(container, layerid, mediaID, contentItem.mediaUrl, vx + leftOffset, mediaTop, contentWidth, mediaHeight, mediaContentElementZIndex);
+			}
+			else if (contentItem.mediaType === 'rin') {
+			    addRINPlayer(container, layerid, mediaID, vx + leftOffset, mediaTop, contentWidth, mediaHeight, mediaContentElementZIndex, contentItem.mediaUrl);
+
 			}
 
 			// Title

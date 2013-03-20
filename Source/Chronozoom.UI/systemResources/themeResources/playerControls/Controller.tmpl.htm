@@ -1,0 +1,38 @@
+<div class="mainContainer selectDisable preview" tabindex="0">
+    <div class="rin_Header" data-bind="visible: isHeaderVisible">
+        <span class="rin_HeaderLeft" data-bind="html: title()"></span>
+	<div class="rin_HeaderCenter" data-bind="visible: areTroubleShootControlsVisible">
+        <div class="rin_TroubleShooterControlHolder" data-bind="stopBinding: true"></div>
+	</div>
+	<span class="rin_HeaderRight" data-bind="html: branding()"></span>
+    </div>
+    <div class="rin_ExperienceStream">
+    </div>
+    <div class="rin_Footer" data-bind="visible: showControls">
+        <div class="rin_FooterBackground">
+        </div>
+        <div data-bind="visible: isPlayPauseVisible">
+            <div class="rin_PlayPauseContainer" data-bind="stopBinding: true"></div>
+        </div>
+        <div data-bind="visible: isInteractiveControlVisible">
+            <div class="rin_InteractiveContainer" data-bind="stopBinding: true"></div>
+        </div>
+        <div data-bind="visible: isRightContainerVisible">
+            <div class="rin_RightContainer">
+                <ul>
+                    <li data-bind="visible: areShareButtonsVisible">
+                        <!--<img alt="Facebook" style="display: none;" src="SYSTEM_ROOT/playerControls/img/ToolbarImages/Facebook.png" />--></li>
+                    <li data-bind="visible: isVolumeVisible">
+                        <div class="rin_VolumeControl" data-bind="stopBinding: true"></div>
+                    </li>
+                    <li data-bind="visible: isFullScreenControlVisible">
+                        <div class="rin_FullScreenControl"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="rin_BottomContainer" data-bind="visible: isSeekerVisible">
+            <div class="rin_TimelineHolder" data-bind="stopBinding: true"></div>
+        </div>
+    </div>
+</div>

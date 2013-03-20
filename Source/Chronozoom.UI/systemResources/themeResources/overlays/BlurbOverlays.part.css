@@ -1,0 +1,125 @@
+﻿.rin_blurbMainDiv
+{
+    background-color: transparent;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.rin_blurbContainer
+{
+    position: absolute;
+    width: 350px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    color: #fcfcfc;
+}
+
+.rin_blurbTitle
+{
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.8);
+}
+
+.rin_blurbDesc
+{
+    max-height: 100px;
+    overflow: hidden;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.8);
+}
+
+.rin_blurbMoreContainer
+{
+    font-size: 80%;
+    margin-top: 10px;
+}
+
+.rin_blurbMoreIcon
+{
+    float: left;
+}
+
+.rin_blurbMoreText
+{
+    opacity: 0;
+    left: 30px;
+    position: absolute;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.8);
+    bottom: -2px;
+}
+
+.rin_blurbContainer:hover .rin_blurbMoreText
+{
+    opacity: 1;
+    left: 20px;
+}
+div .rin_overlay_top
+{
+    top: 120px;
+}
+div .rin_overlay_left
+{
+    left: 15px;
+}
+div .rin_overlay_right
+{
+    right: 15px;
+}
+div .rin_overlay_bottom
+{
+    bottom: 120px;
+}
+.rin_popup_CBDescription
+{
+    position: absolute;
+    width: 25%;
+    min-width: 300px;
+    right: 0px;
+    float: right;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 85%;
+    font-size: 100%;
+    font-weight: normal;
+    line-height: 160%;
+    color: #fcfcfc;
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 85%, rgba(0,0,0,0.52) 87%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.8)), color-stop(85%,rgba(0,0,0,0.6)), color-stop(87%,rgba(0,0,0,0.52)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.6) 85%,rgba(0,0,0,0.52) 87%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.6) 85%,rgba(0,0,0,0.52) 87%,rgba(0,0,0,0) 100%); /* Opera 11.050+ */
+    background: -ms-linear-gradient(top,  rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.6) 85%,rgba(0,0,0,0.52) 87%,rgba(0,0,0,0) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.6) 85%,rgba(0,0,0,0.52) 87%,rgba(0,0,0,0) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+.rin_popup_CBDescription h1
+{
+    font-weight: bold;
+    font-size: 140%;
+    text-transform: uppercase;
+    margin: 0;
+}
+.rin_popup_CBDescription h2, h3
+{
+    font-weight: normal;
+    font-size: 90%;
+    margin: 0;
+    color: Gray;
+}
+.rin_popup_CBDescText
+{
+    margin: 30px;
+    margin-top: 80px;
+}

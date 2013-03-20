@@ -1,0 +1,30 @@
+﻿<div class='rin_popup'>
+    <div class='rin_popup_es_container'>
+    </div>
+    <div class='rin_popup_CBDescription'>
+        <div class='rin_popup_CBDescText' data-bind='with: currentItem'>
+            <h1 data-bind='text: title'>
+            </h1>
+            <!-- ko if: $data.description -->
+            <div data-bind='html: description'>
+            </div>
+            <!-- /ko -->
+            <!-- ko if: $data.copyright -->
+            <h2 data-bind='text: copyright'>
+            </h2>
+            <!-- /ko -->
+            <!-- ko if: $data.srcType -->
+            <h3 data-bind='text: srcType'>
+            </h3>
+            <!-- /ko -->
+        </div>
+    </div>
+    <!-- ko if: $data.hasOwnProperty("onNext") -->
+    <input type='button' data-bind='click: onNext, enable:!isLastItem()' class='rin_popup_next'></input>
+    <!-- /ko -->
+    <!-- ko if: $data.hasOwnProperty("onPrevious") -->
+    <input type='button' data-bind='click: onPrevious, enable:!isFirstItem()' class='rin_popup_prev'></input>
+    <!-- /ko -->
+    <div class='rin_popup_close' data-bind='click:onViewClose'>
+    </div>
+</div>
